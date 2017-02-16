@@ -5,8 +5,10 @@
 </template>
 
 <script>
+import '../../public/public'
 export default {
-  name: 'Index',
+  compontents: {},
+  mounted () {},
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
