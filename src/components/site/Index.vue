@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
+    <h1 class="content-navigation">{{ msg }}</h1>
   </div>
 </template>
 
@@ -15,6 +15,17 @@ export default {
     }
   }
 }
+
+require('../../assets/css/common.scss')
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+  $blue: #3bbfce;
+  $margin: 16px;
+
+  .content-navigation {
+    border-color: $blue;
+    color: darken($blue, 9%);
+  }
+</style>
+
