@@ -1,6 +1,16 @@
 <template>
-  <div>
+  <div class="bg">
     <h1 class="content-navigation">{{ msg }}</h1>
+    <a href="">测试</a>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li @click="ceshi">6</li>
+    </ul>
+    <p>我要跳转到 <router-link to="/about">关于</router-link> 页面</p>
   </div>
 </template>
 
@@ -9,23 +19,17 @@ import '../../public/public'
 export default {
   compontents: {},
   mounted () {},
+  methods: {
+    ceshi: function () {
+      window.location.href = '#/about'
+    }
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '个人简历'
     }
   }
 }
 
 require('../../assets/css/common.scss')
 </script>
-
-<style scoped lang="scss">
-  $blue: #3bbfce;
-  $margin: 16px;
-
-  .content-navigation {
-    border-color: $blue;
-    color: darken($blue, 9%);
-  }
-</style>
-
