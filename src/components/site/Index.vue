@@ -11,13 +11,18 @@
       <li @click="ceshi">6</li>
     </ul>
     <p>我要跳转到 <router-link to="/about">关于</router-link> 页面</p>
+
+    <AutoCompleteQuery></AutoCompleteQuery>
   </div>
 </template>
 
 <script>
+import AutoCompleteQuery from '../common/AutoCompleteQuery'
 import '../../public/public'
 export default {
-  compontents: {},
+  components: {
+    AutoCompleteQuery
+  },
   mounted () {},
   methods: {
     ceshi: function () {
