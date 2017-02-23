@@ -49,5 +49,5 @@ export default {
   }
 }
 
-require('../../assets/css/site/index.scss')
+require('../../assets/css/common.scss')
 </script>
