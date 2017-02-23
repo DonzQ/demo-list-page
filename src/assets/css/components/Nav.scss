@@ -1,0 +1,11 @@
+$left-header-width: 320px;
+$left-header-color: blue;
+
+.left{
+  width: $left-header-width;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  overflow-x: hidden;
+  background-color: $left-header-color;
+}
