@@ -1,26 +1,9 @@
 <template>
   <nav class="left">
-    <div>
-      第一部分
-    </div>
+    <div class="left-one"><a href="javascript:;"><img src="" alt=""></a></div>
     <ul>
       <li>第二部分</li>
       <li>导航1</li>
-      <li>导航2</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
-      <li>导航3</li>
     </ul>
     <div>
       第三部分

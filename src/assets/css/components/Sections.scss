@@ -4,3 +4,33 @@ $right-content-color: '';
   background-color: $right-content-color;
 }
 
+.right-header{
+  position: relative;
+}
+
+.right-header-bg{
+  height: 450px;
+  background: url("../../images/index-header.jpg") 0 0 no-repeat;
+}
+
+.shape{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.shape div{
+  width: 50%;
+  height: 60px;
+  background-color: #ffffff;
+}
+
+.space-right{
+  float: right;
+  border-top-left-radius: 60px;
+}
+
+.space-left{
+  border-top-right-radius: 60px;
+  float: left;
+}

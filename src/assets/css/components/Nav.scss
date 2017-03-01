@@ -1,5 +1,6 @@
 $left-header-width: 320px;
-$left-header-color: blue;
+$left-header-color: #292230;
+$left-header-font-color: #fff;
 
 .left{
   width: $left-header-width;
@@ -8,4 +9,18 @@ $left-header-color: blue;
   left: 0;
   overflow-x: hidden;
   background-color: $left-header-color;
+  color: $left-header-font-color;
+  text-align: center;
+}
+
+.left-one{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.left-one img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  vertical-align: middle;
 }

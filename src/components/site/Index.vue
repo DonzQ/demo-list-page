@@ -16,9 +16,7 @@ export default {
     Navigation,
     Sections
   },
-  mounted () {
-
-  }
+  mounted () {}
 }
 
 require('../../assets/css/site/index.scss')

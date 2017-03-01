@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import Mock from 'mockjs'
 import routes from './router/router'
 
 Vue.use(VueRouter)
@@ -14,5 +15,6 @@ const router = new VueRouter({
 })
 
 new Vue({
-  router
+  router,
+  Mock
 }).$mount('#app')
