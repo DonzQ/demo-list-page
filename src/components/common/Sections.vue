@@ -17,18 +17,23 @@ import ajax from '../../public/ajax.js'
 export default {
   name: 'sections',
   mounted () {
+    var self = this
     var Mock = require('mockjs')
-    var template = require('../../../static/index.json')
+    var template = require('../../../static/section.json')
     Mock.mock('http://test', template)
-    let url = 'http://test'
     ajax.getDataFromApi({
-      url: url,
-      data: {}
+      url: 'http://test'
     }, (response) => {
+      self.backGroundImg = response.data.list
       console.log(response.data.list)
     }, (error) => {
       console.log(error)
     })
+  },
+  data () {
+    return {
+      backGroundImg: ''
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-$right-content-color: '';
+$right-content-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3aa7f), color-stop(100%,#26001f));
 
 .right{
   background-color: $right-content-color;
@@ -8,9 +8,22 @@ $right-content-color: '';
   position: relative;
 }
 
+.right-header-bg:before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: $right-content-color;
+  opacity: 0.8;
+}
+
 .right-header-bg{
   height: 450px;
-  background: url("../../images/index-header.jpg") 0 0 no-repeat;
+  position: relative;
+  background-image: url("../../images/index-header.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .shape{
