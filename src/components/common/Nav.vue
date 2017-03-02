@@ -2,7 +2,7 @@
   <nav class="left">
     <div class="left-one">
       <a href="javascript:;">
-        <img :src="img.url" alt="">
+        <img :src="img.url" title="头像">
       </a>
     </div>
     <ul class="left-two">

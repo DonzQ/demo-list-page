@@ -1,8 +1,4 @@
-$right-content-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3aa7f), color-stop(100%,#26001f));
-
-.right{
-  background-color: $right-content-color;
-}
+$right-bg-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3aa7f), color-stop(100%,#26001f));
 
 .right-header{
   position: relative;
@@ -13,7 +9,7 @@ $right-content-color: -webkit-gradient(linear, left top, left bottom, color-stop
   width: 100%;
   height: 100%;
   content: '';
-  background: $right-content-color;
+  background: $right-bg-color;
   opacity: 0.8;
 }
 
@@ -46,4 +42,8 @@ $right-content-color: -webkit-gradient(linear, left top, left bottom, color-stop
 .space-left{
   border-top-right-radius: 60px;
   float: left;
+}
+
+.right-section{
+  text-align: center;
 }

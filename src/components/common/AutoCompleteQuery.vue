@@ -1,62 +1,48 @@
 <template>
   <div class="autoCompleteQuery">
-    <input type="text" @focus="focus">
-    <transition
-      name="fade"
-      mode="out-in"
-      appear>
-      <ul v-if="showFlag">
-        <li v-for="item in data" :key="item.name">{{item.name}}</li>
-      </ul>
-    </transition>
+    <input type="text" v-model="inputSome" @click="readyInput($event)">
+    <ul v-show="flag">
+      <li v-for="item in computedData">{{item.name}}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-module.exports = {
-  name: 'AutoCompleteQuery',
-  created: function () {},
-  mounted: function () {
-    var self = this
-    addEventListener('document', 'click', function () {
-      self.showFlag = false
-    })
+export default {
+  props: {
+    data: {
+      require: true
+    }
+  },
+  mounted () {},
+  computed: {
+    computedData () {
+      var self = this
+      this.$emit('getSome', self.inputSome)
+      return this.data.filter(function (item) {
+        return item.name.indexOf(self.inputSome) !== -1
+      })
+    }
   },
   methods: {
-    focus: function () {
+    readyInput (e) {
+      e.stopPropagation()
       var self = this
-      self.showFlag = true
-    },
-    b: function () {
-      var self = this
-      self.showFlag = false
-    },
-    select: function (name, event) {
-      console.log(name)
-      var self = this
-      self.showFlag = false
-    },
-    beforeEnter: function () {
-      console.log('a')
-    },
-    enter: function () {
-      console.log('c')
-    },
-    leave: function () {
-      console.log('ff')
+      self.flag = true
+      var bindEvent = function () {
+        self.flag = false
+        document.removeEventListener('click', bindEvent, false)
+      }
+      document.addEventListener('click', bindEvent, false)
     }
   },
   data () {
     return {
-      showFlag: false,
-      data: [
-        {name: 1},
-        {name: 2},
-        {name: 3}
-      ]
+      flag: false,
+      inputSome: ''
     }
   }
 }
 
-require('../../assets/css/AutoCompleteQuery.scss')
+require('../../assets/css/components/AutoCompleteQuery.scss')
 </script>
