@@ -2,7 +2,7 @@
   <nav class="left">
     <div class="left-one">
       <a href="javascript:;">
-        <img :src="img.url" title="头像">
+        <img src="../../assets/images/logo-DonzQ(114px).png" title="头像">
       </a>
     </div>
     <ul class="left-two">
@@ -34,7 +34,6 @@ export default {
       }
       ajax.getDataFromApi(data, (response) => {
         self.navs = response.data.list
-        self.img = response.data.img
       }, (error) => {
         console.log(error)
       })
@@ -42,8 +41,7 @@ export default {
   },
   data () {
     return {
-      navs: '',
-      img: ''
+      navs: ''
     }
   }
 }

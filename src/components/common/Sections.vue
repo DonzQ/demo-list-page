@@ -12,6 +12,7 @@
       <h2>Demo</h2>
       <div>
         <auto-complete-query v-on:getSome="getSome" :data="selectData"></auto-complete-query>
+        <span>我选择的是:{{search}}</span>
       </div>
     </div>
   </section>
