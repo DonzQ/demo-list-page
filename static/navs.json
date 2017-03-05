@@ -2,23 +2,28 @@
   "list": [
     {
       "id": 1,
-      "name": "导航1"
+      "name": "Home",
+      "url": "/home"
     },
     {
       "id": 2,
-      "name": "导航2"
+      "name": "Vue-Demo",
+      "url": "/vue-demo"
     },
     {
       "id": 3,
-      "name": "导航3"
+      "name": "JavaScript",
+      "url": "/s"
     },
     {
       "id": 4,
-      "name": "导航4"
+      "name": "Profile",
+      "url": "/a"
     },
     {
       "id": 5,
-      "name": "我是导航5"
+      "name": "About",
+      "url": "/a"
     }
   ]
 }

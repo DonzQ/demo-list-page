@@ -1,8 +1,10 @@
-const Index = resolve => require(['../components/site/Index'], resolve)
+const Home = resolve => require(['../components/site/Home'], resolve)
+const VueDemo = resolve => require(['../components/site/VueDemo'], resolve)
 
 const router = [
-  { path: '', redirect: '/index' },
-  { path: '/index', component: Index }
+  { path: '', redirect: '/home' },
+  { path: '/home', component: Home },
+  { path: '/vue-demo', component: VueDemo }
 ]
 
 export default router

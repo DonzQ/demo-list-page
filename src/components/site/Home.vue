@@ -2,22 +2,21 @@
   <div class="container">
     <!--左侧导航-->
     <navigation></navigation>
-
     <!--右侧内容-->
-    <sections></sections>
+    <SectionHeader></SectionHeader>
   </div>
 </template>
 
 <script>
 import Navigation from '../common/Nav'
-import Sections from '../common/Sections'
+import SectionHeader from '../common/SectionHeader'
 export default {
   components: {
     Navigation,
-    Sections
+    SectionHeader
   },
   mounted () {}
 }
 
-require('../../assets/css/site/index.scss')
+require('../../assets/css/site/Home.scss')
 </script>

@@ -1,5 +1,7 @@
 $browser-default-font-size: 16px !default;
 $browser-default-bg-color: #fff !default;
+$a-font-color: #39f;
+$a-font-color-hover: #5cadff;
 
 // px 转换为 rem
 @function pxToRem($px) {
@@ -19,13 +21,25 @@ body{
 
 a{
   text-decoration: none;
+  color: $a-font-color;
+  background: 0 0;
+  cursor: pointer;
+  transition: color .2s ease;
 }
 
-ul,h1,h2,h3,h4,h5,h6{
+a:hover{
+  color: $a-font-color-hover;
+}
+
+ul,h1,h2,h3,h4,h5,h6,p{
   margin: 0px;
   padding: 0px;
 }
 
 li{
   list-style: none;
+}
+
+.container{
+  padding-left: 320px;
 }

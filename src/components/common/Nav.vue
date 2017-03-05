@@ -7,7 +7,8 @@
     </div>
     <ul class="left-two">
       <li v-for="item in navs">
-        <a href="">{{item.name}}</a>
+        <!--<a href=""></a>-->
+        <router-link :to="item.url">{{item.name}}</router-link>
       </li>
     </ul>
     <div class="left-three">

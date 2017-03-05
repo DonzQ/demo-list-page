@@ -1,12 +1,21 @@
 <template>
   <div class="autoCompleteQuery">
-    <input @click="readyInput($event)" @keydown="keySelect($event)" v-model="inputSome" type="text">
+    <input type="text"
+     @blur="toggleMenu"
+     @click="flag = true"
+     @keydown="keySelect($event)"
+    v-model="inputSome">
     <div ref="selectBox" v-show="flag" class="select-box">
       <ul v-if="computedData == ''">
         <li>未查询到数据!</li>
       </ul>
       <ul v-else>
-        <li ref="options" v-for="(item, index) in computedData" :class="{'active':index === nowSelect}" @click="selectOne(item)">{{item.name}}</li>
+        <li ref="options"
+          v-for="(item, index) in computedData"
+          :class="{'active':index === nowSelect}"
+          @click="selectOne(item)">
+          {{item.name}}
+        </li>
       </ul>
     </div>
   </div>
@@ -19,7 +28,6 @@ export default {
       require: true
     }
   },
-  mounted () {},
   computed: {
     computedData () {
       var self = this
@@ -31,16 +39,12 @@ export default {
     }
   },
   methods: {
-//    选择输入
-    readyInput (e) {
-      e.stopPropagation()
+//    是否隐藏下拉框
+    toggleMenu () {
       var self = this
-      self.flag = true
-      var bindEvent = function () {
+      setTimeout(() => {
         self.flag = false
-        document.removeEventListener('click', bindEvent, false)
-      }
-      document.addEventListener('click', bindEvent, false)
+      }, 100)
     },
 //    鼠标点击选择
     selectOne (item) {
@@ -70,9 +74,6 @@ export default {
             self.nowSelect = 0
             self.flag = false
             event.target.blur()
-            break
-          case 8:// 删除
-            self.flag = true
             break
         }
         self.resetScroll()
